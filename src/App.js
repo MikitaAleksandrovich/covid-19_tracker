@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Cards, Chart, CountryPicker } from './components';
 import { fetchData } from './api';
 import styles from './App.module.css';
+import image from './images/image.png';
 
 class App extends Component {
 
@@ -19,24 +20,23 @@ class App extends Component {
     }
 
     handleCountryChange = async (country) => {
-        // fetch data
         const fetchedData = await fetchData(country);
-
-        console.log(fetchedData);
-        // set the state
-        
-
+        this.setState({
+            data: fetchedData,
+            country: country,
+        })
     }
 
     render() {
 
-        const { data } = this.state;
+        const { data, country } = this.state;
 
         return(
             <div className={styles.container}>
+                <img src={image} />
                 <Cards data={data} />
                 <CountryPicker data={data} handleCountryChange={this.handleCountryChange}/>
-                <Chart data={data} />
+                <Chart data={data} country={country} />
             </div>
         )
     }
