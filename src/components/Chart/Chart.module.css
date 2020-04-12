@@ -4,3 +4,10 @@
     width: 80%;
     margin: 2% 10%;
 }
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin: 0;
+    };
+};
