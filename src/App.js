@@ -33,7 +33,7 @@ class App extends Component {
 
         return(
             <div className={styles.container}>
-                <img src={image} />
+                <img className={styles.image} src={image} />
                 <Cards data={data} />
                 <CountryPicker data={data} handleCountryChange={this.handleCountryChange}/>
                 <Chart data={data} country={country} />
