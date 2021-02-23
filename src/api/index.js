@@ -9,7 +9,7 @@ export const fetchData = async (country) => {
     if(country) {
         changeableUrl = `${url}/countries/${country}`;
     }
-
+    
     try {
         const { data } = await axios.get(changeableUrl);
 
@@ -20,7 +20,7 @@ export const fetchData = async (country) => {
             lastUpdate: data.lastUpdate
         }
 
-    } catch (error) {
+    }  сatch(error) {
         console.log(error);
     }
 };
