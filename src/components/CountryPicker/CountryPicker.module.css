@@ -1,4 +1,7 @@
-  .formControl {
+.formControl {
     width: 30%;
     margin-bottom: 30px !important;
+    background-color: #ffd1dc;
+    border-radius: 4px;
+    padding: 8px;
   }
